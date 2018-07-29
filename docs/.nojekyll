@@ -1,0 +1,18 @@
+file created in order to properly view documents.  created to instruct GitHub to ignore intepretation. 
+
+HTML documentation hosted on GitHub are broken
+Symptoms
+
+While everything is working with the local web server, your HTML documentation hosted on GitHub and served as a GitHub pages has a broken or indefinitely loading table of contents.
+
+
+
+Solutions
+
+By default, GitHub assumes that you are hosting Jekyll (a static site generator) compatible pages: file names starting with a "_" (underscore) are ignored and not served by the GitHub web server. However, HelpNDoc generates files starting with a "_" (table of contents, keywords...) and those files are needed for the default HTML template to work correctly.
+The solution is to include a .nojekyll file in the root path of your HTML documentation to turn off Jekyll on GitHub pages. See this article from GitHub for more information.
+
+
+
+ref: 
+https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/
